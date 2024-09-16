@@ -49,6 +49,11 @@ jobs:
           restore-keys: |
             ${{ env.cache-name }}-
 
+      - name: Configure git
+        run: |
+          git config --local user.email test@localhost
+          git config --local user.name test
+
       - name: Setup python
         uses: actions/setup-python@v5
         with:
