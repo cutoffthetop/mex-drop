@@ -124,10 +124,10 @@ jobs:
       - name: 'Build Inventory Image'
         run: |
           docker build . \
-          --tag ghcr.io/robert-koch-institut/mex-drop:latest \
-          --tag ghcr.io/robert-koch-institut/mex-drop:${{ github.sha }} \
-          --tag ghcr.io/robert-koch-institut/mex-drop:${{ needs.release.outputs.tag }}
-          docker push --all-tags ghcr.io/robert-koch-institut/mex-drop
+          --tag ghcr.io/cutoffthetop/mex-drop:latest \
+          --tag ghcr.io/cutoffthetop/mex-drop:${{ github.sha }} \
+          --tag ghcr.io/cutoffthetop/mex-drop:${{ needs.release.outputs.tag }}
+          docker push --all-tags ghcr.io/cutoffthetop/mex-drop
 
   distribute:
     runs-on: ubuntu-latest
